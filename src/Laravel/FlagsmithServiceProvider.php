@@ -50,9 +50,9 @@ class FlagsmithServiceProvider extends ServiceProvider
                 }
 
                 $client
-                    ->withCache($cache)
                     ->withCachePrefix($cacheConfig['prefix'] ?? 'flagsmith')
-                    ->withTimeToLive($cacheConfig['ttl'] ?? null);
+                    ->withTimeToLive($cacheConfig['ttl'] ?? null)
+                    ->withCache($cache);
             }
 
             if (!empty($config['auto_update_environment']) && !empty($config['environment_ttl'])) {
