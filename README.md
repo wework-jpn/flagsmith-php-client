@@ -50,6 +50,35 @@ To move to a different tag, require the new tag explicitly:
 composer require wework-japan/flagsmith-laravel-client:v1.0.1
 ```
 
+## Development Checks
+
+Install development dependencies, then install the repository Git hooks:
+
+```bash
+composer install
+composer hooks:install
+```
+
+Available quality commands:
+
+```bash
+composer format
+composer lint
+composer analyse
+composer test
+composer quality
+```
+
+The pre-commit hook runs `composer lint`, `composer analyse`, and `composer test`. A commit is blocked when any of them fails.
+
+The commit-msg hook enforces this conventional commit header format and requires a non-empty body:
+
+```text
+<type>(<scope>): <subject> [JDTD-123]
+```
+
+Allowed types are `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `build`, `ci`, `chore`, `perf`, and `revert`.
+
 ## Laravel Setup
 
 Laravel will auto-discover `Flagsmith\Laravel\FlagsmithServiceProvider` and the `Flagsmith` facade alias.

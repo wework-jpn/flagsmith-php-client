@@ -2,6 +2,9 @@
 	"name": "@wework-japan/flagsmith-laravel-client",
 	"version": "1.0.0",
 	"main": "index.js",
+	"scripts": {
+		"commitlint": "commitlint --edit"
+	},
 	"directories": {
 		"test": "tests"
 	},
@@ -15,5 +18,10 @@
 	"dependencies": {
 		"@prettier/plugin-php": "^0.14.3",
 		"prettier": "^2.1.2"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^19.0.0",
+		"@commitlint/config-conventional": "^19.0.0",
+		"conventional-changelog-conventionalcommits": "^8.0.0"
 	}
 }

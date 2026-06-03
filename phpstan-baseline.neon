@@ -1,0 +1,325 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^PHPDoc tag @param for parameter \$keys with type iterable is not subtype of native type array\.$#'
+			identifier: parameter.phpDocType
+			count: 1
+			path: src/Cache.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$values with type iterable is not subtype of native type array\.$#'
+			identifier: parameter.phpDocType
+			count: 1
+			path: src/Cache.php
+
+		-
+			message: '#^Match arm comparison between Flagsmith\\Engine\\Utils\\Types\\Context\\SegmentConditionOperator\:\:LESS_THAN_INCLUSIVE and Flagsmith\\Engine\\Utils\\Types\\Context\\SegmentConditionOperator\:\:LESS_THAN_INCLUSIVE is always true\.$#'
+			identifier: match.alwaysTrue
+			count: 1
+			path: src/Engine/Engine.php
+
+		-
+			message: '#^Parameter \#2 \$num2 of function fmod expects float, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Engine/Engine.php
+
+		-
+			message: '#^Access to an undefined property Flagsmith\\Engine\\Environments\\EnvironmentModel\:\:\$amplitude_config\.$#'
+			identifier: property.notFound
+			count: 1
+			path: src/Engine/Environments/EnvironmentModel.php
+
+		-
+			message: '#^Access to an undefined property Flagsmith\\Engine\\Environments\\EnvironmentModel\:\:\$heap_config\.$#'
+			identifier: property.notFound
+			count: 1
+			path: src/Engine/Environments/EnvironmentModel.php
+
+		-
+			message: '#^Access to an undefined property Flagsmith\\Engine\\Environments\\EnvironmentModel\:\:\$mixpanel_config\.$#'
+			identifier: property.notFound
+			count: 1
+			path: src/Engine/Environments/EnvironmentModel.php
+
+		-
+			message: '#^Access to an undefined property Flagsmith\\Engine\\Environments\\EnvironmentModel\:\:\$segment_config\.$#'
+			identifier: property.notFound
+			count: 1
+			path: src/Engine/Environments/EnvironmentModel.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$apiKey$#'
+			identifier: parameter.notFound
+			count: 1
+			path: src/Engine/Environments/Integrations/IntegrationModel.php
+
+		-
+			message: '#^Expression on left side of \?\? is not nullable\.$#'
+			identifier: nullCoalesce.expr
+			count: 2
+			path: src/Engine/Features/FeatureStateModel.php
+
+		-
+			message: '#^PHPDoc tag @return with type Flagsmith\\Engine\\Utils\\Collections\\SegmentRuleModelList is incompatible with native type Flagsmith\\Engine\\Segments\\SegmentRuleModel\.$#'
+			identifier: return.phpDocType
+			count: 1
+			path: src/Engine/Segments/SegmentRuleModel.php
+
+		-
+			message: '#^Cannot call static method build\(\) on array\|string\.$#'
+			identifier: staticMethod.nonObject
+			count: 1
+			path: src/Engine/Utils/Collections/FeatureStateModelList.php
+
+		-
+			message: '#^Instantiated class Flagsmith\\Engine\\Utils\\Exceptions\\FeatureStateNotFound not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Engine/Utils/Collections/FeatureStateModelList.php
+
+		-
+			message: '#^Property Flagsmith\\Engine\\Utils\\Collections\\FeatureStateModelList\:\:\$list_type \(string\) on left side of \?\? is not nullable\.$#'
+			identifier: nullCoalesce.property
+			count: 1
+			path: src/Engine/Utils/Collections/FeatureStateModelList.php
+
+		-
+			message: '#^Throwing object of an unknown class Flagsmith\\Engine\\Utils\\Exceptions\\FeatureStateNotFound\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Engine/Utils/Collections/FeatureStateModelList.php
+
+		-
+			message: '#^Cannot call static method build\(\) on array\|string\.$#'
+			identifier: staticMethod.nonObject
+			count: 1
+			path: src/Engine/Utils/Collections/IdentityFeaturesList.php
+
+		-
+			message: '#^Property Flagsmith\\Engine\\Utils\\Collections\\IdentityFeaturesList\:\:\$list_type \(string\) on left side of \?\? is not nullable\.$#'
+			identifier: nullCoalesce.property
+			count: 1
+			path: src/Engine/Utils/Collections/IdentityFeaturesList.php
+
+		-
+			message: '#^Access to property \$identifier on an unknown class Flagsmith\\Engine\\Utils\\Collections\\IdentityModel\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Engine/Utils/Collections/IdentityList.php
+
+		-
+			message: '#^Cannot call static method build\(\) on array\|string\.$#'
+			identifier: staticMethod.nonObject
+			count: 1
+			path: src/Engine/Utils/Collections/IdentityList.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$key$#'
+			identifier: parameter.notFound
+			count: 1
+			path: src/Engine/Utils/Collections/IdentityList.php
+
+		-
+			message: '#^Parameter \$value of method Flagsmith\\Engine\\Utils\\Collections\\IdentityList\:\:offsetSet\(\) has invalid type Flagsmith\\Engine\\Utils\\Collections\\IdentityModel\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Engine/Utils/Collections/IdentityList.php
+
+		-
+			message: '#^Property Flagsmith\\Engine\\Utils\\Collections\\IdentityList\:\:\$list_type \(string\) on left side of \?\? is not nullable\.$#'
+			identifier: nullCoalesce.property
+			count: 1
+			path: src/Engine/Utils/Collections/IdentityList.php
+
+		-
+			message: '#^Cannot call static method build\(\) on array\|string\.$#'
+			identifier: staticMethod.nonObject
+			count: 1
+			path: src/Engine/Utils/Collections/IdentityTraitList.php
+
+		-
+			message: '#^Property Flagsmith\\Engine\\Utils\\Collections\\IdentityTraitList\:\:\$list_type \(string\) on left side of \?\? is not nullable\.$#'
+			identifier: nullCoalesce.property
+			count: 1
+			path: src/Engine/Utils/Collections/IdentityTraitList.php
+
+		-
+			message: '#^Cannot call static method build\(\) on array\|string\.$#'
+			identifier: staticMethod.nonObject
+			count: 1
+			path: src/Engine/Utils/Collections/MultivariateFeatureStateValueModelList.php
+
+		-
+			message: '#^Property Flagsmith\\Engine\\Utils\\Collections\\MultivariateFeatureStateValueModelList\:\:\$list_type \(string\) on left side of \?\? is not nullable\.$#'
+			identifier: nullCoalesce.property
+			count: 1
+			path: src/Engine/Utils/Collections/MultivariateFeatureStateValueModelList.php
+
+		-
+			message: '#^Cannot call static method build\(\) on array\|string\.$#'
+			identifier: staticMethod.nonObject
+			count: 1
+			path: src/Engine/Utils/Collections/SegmentConditionModelList.php
+
+		-
+			message: '#^Property Flagsmith\\Engine\\Utils\\Collections\\SegmentConditionModelList\:\:\$list_type \(string\) on left side of \?\? is not nullable\.$#'
+			identifier: nullCoalesce.property
+			count: 1
+			path: src/Engine/Utils/Collections/SegmentConditionModelList.php
+
+		-
+			message: '#^Cannot call static method build\(\) on array\|string\.$#'
+			identifier: staticMethod.nonObject
+			count: 1
+			path: src/Engine/Utils/Collections/SegmentModelList.php
+
+		-
+			message: '#^Property Flagsmith\\Engine\\Utils\\Collections\\SegmentModelList\:\:\$list_type \(string\) on left side of \?\? is not nullable\.$#'
+			identifier: nullCoalesce.property
+			count: 1
+			path: src/Engine/Utils/Collections/SegmentModelList.php
+
+		-
+			message: '#^Cannot call static method build\(\) on array\|string\.$#'
+			identifier: staticMethod.nonObject
+			count: 1
+			path: src/Engine/Utils/Collections/SegmentRuleModelList.php
+
+		-
+			message: '#^Property Flagsmith\\Engine\\Utils\\Collections\\SegmentRuleModelList\:\:\$list_type \(string\) on left side of \?\? is not nullable\.$#'
+			identifier: nullCoalesce.property
+			count: 1
+			path: src/Engine/Utils/Collections/SegmentRuleModelList.php
+
+		-
+			message: '#^Property Flagsmith\\Engine\\Utils\\Types\\Context\\SegmentRule\:\:\$type \(Flagsmith\\Engine\\Utils\\Types\\Context\\RuleType\) does not accept Flagsmith\\Engine\\Utils\\Types\\Context\\SegmentRuleType\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: src/Engine/Utils/Types/Context/EvaluationContext.php
+
+		-
+			message: '#^Property Flagsmith\\Engine\\Utils\\Types\\Context\\SegmentRule\:\:\$type has unknown class Flagsmith\\Engine\\Utils\\Types\\Context\\RuleType as its type\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Engine/Utils/Types/Context/SegmentRule.php
+
+		-
+			message: '#^Cannot access property \$flags on array\|object\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: src/Flagsmith.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$enableAnalytics$#'
+			identifier: parameter.notFound
+			count: 1
+			path: src/Flagsmith.php
+
+		-
+			message: '#^Strict comparison using \!\=\= between int\<min, 199\>\|int\<201, max\> and 200 will always evaluate to true\.$#'
+			identifier: notIdentical.alwaysTrue
+			count: 1
+			path: src/Flagsmith.php
+
+		-
+			message: '#^Function config_path not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: src/Laravel/FlagsmithServiceProvider.php
+
+		-
+			message: '#^Method Flagsmith\\Models\\Feature\:\:getDefaultEnabled\(\) should return string but returns bool\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Models/Feature.php
+
+		-
+			message: '#^Method Flagsmith\\Models\\Flag\:\:fromApiFlag\(\) should return Flagsmith\\Models\\Flag but returns Flagsmith\\Models\\BaseFlag\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Models/Flag.php
+
+		-
+			message: '#^Method Flagsmith\\Models\\Flag\:\:withFeatureId\(\) should return Flagsmith\\Models\\Flag but returns Flagsmith\\Models\\BaseFlag\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Models/Flag.php
+
+		-
+			message: '#^Method Flagsmith\\Models\\Flag\:\:withFeatureName\(\) should return Flagsmith\\Models\\Flag but returns Flagsmith\\Models\\BaseFlag\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Models/Flag.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$apiFlags with type array is incompatible with native type object\.$#'
+			identifier: parameter.phpDocType
+			count: 1
+			path: src/Models/Flags.php
+
+		-
+			message: '#^PHPDoc tag @return with type void is incompatible with native type Flagsmith\\Models\\Flags\.$#'
+			identifier: return.phpDocType
+			count: 1
+			path: src/Models/Flags.php
+
+		-
+			message: '#^Static method Flagsmith\\Models\\Flag\:\:fromApiFlag\(\) invoked with 2 parameters, 1 required\.$#'
+			identifier: arguments.count
+			count: 1
+			path: src/Models/Flags.php
+
+		-
+			message: '#^Property Flagsmith\\Utils\\AnalyticsProcessor\:\:\$timeout is never read, only written\.$#'
+			identifier: property.onlyWritten
+			count: 1
+			path: src/Utils/AnalyticsProcessor.php
+
+		-
+			message: '#^Cannot call static method build\(\) on array\|string\.$#'
+			identifier: staticMethod.nonObject
+			count: 1
+			path: src/Utils/Collections/FlagModelsList.php
+
+		-
+			message: '#^Property Flagsmith\\Utils\\Collections\\FlagModelsList\:\:\$list_type \(string\) on left side of \?\? is not nullable\.$#'
+			identifier: nullCoalesce.property
+			count: 1
+			path: src/Utils/Collections/FlagModelsList.php
+
+		-
+			message: '#^Cannot access property \$feature on \(int\|string\)\.$#'
+			identifier: property.nonObject
+			count: 2
+			path: src/Utils/Mappers.php
+
+		-
+			message: '#^Expression on left side of \?\? is not nullable\.$#'
+			identifier: nullCoalesce.expr
+			count: 2
+			path: src/Utils/Mappers.php
+
+		-
+			message: '#^Property Flagsmith\\Engine\\Utils\\Types\\Context\\SegmentRule\:\:\$type \(Flagsmith\\Engine\\Utils\\Types\\Context\\RuleType\) does not accept Flagsmith\\Engine\\Utils\\Types\\Context\\SegmentRuleType\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: src/Utils/Mappers.php
+
+		-
+			message: '#^Property Flagsmith\\Engine\\Utils\\Types\\Context\\SegmentRule\:\:\$type \(Flagsmith\\Engine\\Utils\\Types\\Context\\RuleType\) does not accept Flagsmith\\Engine\\Utils\\Types\\Context\\SegmentRuleType\:\:ALL\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: src/Utils/Mappers.php
+
+		-
+			message: '#^Using nullsafe property access "\?\-\>priority" on left side of \?\? is unnecessary\. Use \-\> instead\.$#'
+			identifier: nullsafe.neverNull
+			count: 1
+			path: src/Utils/Mappers.php
+
+		-
+			message: '#^Parameter \#1 \$microseconds of function usleep expects int, float given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Utils/Retry.php

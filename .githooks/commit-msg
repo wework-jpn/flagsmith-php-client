@@ -1,0 +1,32 @@
+#!/usr/bin/env sh
+set -eu
+
+commit_msg_file="${1:?Missing commit message file.}"
+header="$(sed -n '1p' "$commit_msg_file")"
+
+header_regex='^(feat|fix|docs|style|refactor|test|build|ci|chore|perf|revert)\([^)]+\): .+ \[JDTD-[0-9]+\]$'
+
+fail() {
+    printf '%s\n' "Invalid commit message: $1" >&2
+    printf '%s\n' "Expected: <type>(<scope>): <subject> [JDTD-123]" >&2
+    printf '%s\n' "Allowed types: feat, fix, docs, style, refactor, test, build, ci, chore, perf, revert" >&2
+    exit 1
+}
+
+printf '%s' "$header" | grep -Eq "$header_regex" || fail "header must match conventional commit format with a JDTD ticket."
+
+header_length="$(printf '%s' "$header" | wc -c | tr -d ' ')"
+[ "$header_length" -le 512 ] || fail "header must be 512 characters or fewer."
+
+subject="$(printf '%s' "$header" | sed -E 's/^[^(]+\([^)]+\): (.*) \[JDTD-[0-9]+\]$/\1/')"
+[ -n "$subject" ] || fail "subject must not be empty."
+printf '%s' "$subject" | grep -Eq '\.$' && fail "subject must not end with a full stop."
+printf '%s' "$subject" | grep -Eq '^[A-Z]' && fail "subject must not start with an uppercase letter."
+
+second_line="$(sed -n '2p' "$commit_msg_file")"
+[ -z "$second_line" ] || fail "body must be separated from the header by a blank line."
+
+body="$(sed '1,2d' "$commit_msg_file" | sed '/^#/d')"
+printf '%s' "$body" | grep -Eq '[^[:space:]]' || fail "body must not be empty."
+
+awk 'NR > 1 && length($0) > 256 { exit 1 }' "$commit_msg_file" || fail "body lines must be 256 characters or fewer."

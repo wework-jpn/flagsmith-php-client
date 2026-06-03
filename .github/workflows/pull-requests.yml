@@ -42,7 +42,10 @@ jobs:
         run: composer install --prefer-dist
 
       - name: Check coding style
-        run: ./vendor/bin/php-cs-fixer fix -vvv --config=.php-cs-fixer.php --dry-run --diff
+        run: composer lint
+
+      - name: Run static analysis
+        run: composer analyse
 
       - name: Running tests
-        run: ./vendor/bin/phpunit tests/
+        run: composer test

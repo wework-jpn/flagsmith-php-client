@@ -9,7 +9,7 @@ class Hashing
         $toHash = str_repeat(implode(',', $objectIds), $iterations);
         $toHashValue = md5($toHash);
 
-        $value = floatval(bcdiv((string) self::hexModulo($toHashValue, 9999), 9998, 5)) * 100;
+        $value = floatval(bcdiv((string) self::hexModulo($toHashValue, 9999), '9998', 5)) * 100;
 
         if ($value == 100) {
             return self::getHashedPercentageForObjectIds($objectIds, $iterations + 1);

@@ -1,0 +1,15 @@
+includes:
+    - phpstan-baseline.neon
+
+parameters:
+    level: 5
+    paths:
+        - src
+
+    stubFiles:
+        - phpstan.stub.php
+
+    excludePaths:
+        - tests/Engine/EngineTests/EngineTestData
+
+    treatPhpDocTypesAsCertain: false

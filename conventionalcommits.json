@@ -1,0 +1,67 @@
+{
+  "types": {
+    "feat": {
+      "description": "Changes which introduce a new feature"
+    },
+    "fix": {
+      "description": "Changes which patch a bug"
+    },
+    "docs": {
+      "description": "Changes which affect documentation"
+    },
+    "style": {
+      "description": "Changes which don't affect code logic, such as white-spaces, formatting, missing semi-colons"
+    },
+    "refactor": {
+      "description": "Changes which neither fix a bug nor add a feature"
+    },
+    "test": {
+      "description": "Changes which add missing tests or correct existing tests"
+    },
+    "build": {
+      "description": "Changes which affect the build system or external dependencies.<br/>Example scopes: gulp, broccoli, npm",
+      "scopes": {
+        "composer": {},
+        "circleci": {}
+      }
+    },
+    "ci": {
+      "description": "Changes which affect CI configuration files and scripts.<br/>Example scopes: travis, circle, browser-stack, sauce-labs"
+    },
+    "chore": {
+      "description": "Changes which aren't user-facing"
+    },
+    "perf": {
+      "description": "Changes which improve performance"
+    },
+    "revert": {
+      "description": "Changes which revert a previous commit"
+    }
+  },
+  "footerTypes": [
+    {
+      "name": "BREAKING-CHANGE",
+      "description": "The commit introduces breaking API changes"
+    },
+    {
+      "name": "Closes",
+      "description": "The commit closes issues or pull requests"
+    },
+    {
+      "name": "Implements",
+      "description": "The commit implements features"
+    },
+    {
+      "name": "Author",
+      "description": "The commit's author"
+    },
+    {
+      "name": "Co-authored-by",
+      "description": "The commit is co-authored by another person.<br/>For multiple people use one line each"
+    },
+    {
+      "name": "Refs",
+      "description": "The commit references other commits by their hash ID.<br/>For multiple hash IDs use a comma as separator"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+set -eu
+
+echo "Running formatting check..."
+composer lint
+
+echo "Running static analysis..."
+composer analyse
+
+echo "Running test suite..."
+composer test

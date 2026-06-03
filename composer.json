@@ -28,13 +28,26 @@
     "friendsofphp/php-cs-fixer": "^3.6",
     "doppiogancio/mocked-client": "^3.0",
     "colinodell/json5": "^3.0",
-    "vlucas/phpdotenv": "^5.6"
+    "vlucas/phpdotenv": "^5.6",
+    "phpstan/phpstan": "^2.1"
   },
   "autoload": {
     "psr-4": {
       "Flagsmith\\": "src",
       "FlagsmithTest\\": "tests"
     }
+  },
+  "scripts": {
+    "format": "php-cs-fixer fix -vvv --config=.php-cs-fixer.php --sequential",
+    "lint": "php-cs-fixer fix -vvv --config=.php-cs-fixer.php --dry-run --diff --sequential",
+    "analyse": "phpstan analyse --configuration=phpstan.neon --memory-limit=1G --no-progress --debug",
+    "test": "phpunit",
+    "quality": [
+      "@lint",
+      "@analyse",
+      "@test"
+    ],
+    "hooks:install": "git config core.hooksPath .githooks"
   },
   "extra": {
     "laravel": {
