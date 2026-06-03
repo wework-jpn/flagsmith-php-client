@@ -8,7 +8,7 @@ This fork is based on `Flagsmith/flagsmith-php-client` `v5.1.1`. It keeps the up
 
 - PHP `>=8.1`
 - `ext-bcmath`
-- Laravel/Illuminate `^8.0 || ^9.0 || ^10.0 || ^11.0 || ^12.0`
+- Laravel/Illuminate `^8.0 || ^9.0 || ^10.0 || ^11.0 || ^12.0 || ^13.0`
 - PSR-17 and PSR-18 implementations, such as Guzzle and PSR-7
 
 This fork does not require `ext-gmp`.
