@@ -1,5 +1,5 @@
 {
-  "name": "flagsmith/flagsmith-php-client",
+  "name": "wework-japan/flagsmith-laravel-client",
   "type": "library",
   "version": "5.1.0",
   "license": "BSD-3-Clause",
