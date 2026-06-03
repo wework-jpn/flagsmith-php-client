@@ -71,9 +71,10 @@ composer quality
 
 The pre-commit hook runs `composer lint`, `composer analyse`, and `composer test`. A commit is blocked when any of them fails.
 
-The commit-msg hook enforces this conventional commit header format and requires a non-empty body:
+The commit-msg hook enforces this conventional commit header format and requires a non-empty body. Add a JIRA ticket only when the job has one:
 
 ```text
+<type>(<scope>): <subject>
 <type>(<scope>): <subject> [JDTD-123]
 ```
 

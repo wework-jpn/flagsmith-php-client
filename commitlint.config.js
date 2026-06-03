@@ -10,7 +10,7 @@ module.exports = {
             ['sentence-case', 'start-case', 'pascal-case', 'upper-case'],
         ],
         'header-max-length': [2, 'always', 512],
-        'header-format': [2, 'always', /^(feat|fix|docs|style|refactor|test|build|ci|chore|perf|revert)\([^)]+\): .+ \[JDTD-\d+\]$/],
+        'header-format': [2, 'always', /^(feat|fix|docs|style|refactor|test|build|ci|chore|perf|revert)\([^)]+\): .+( \[JDTD-\d+\])?$/],
         'body-leading-blank': [2, 'always'],
         'body-max-line-length': [2, 'always', 256],
         'body-empty': [2, 'never'],
@@ -18,25 +18,17 @@ module.exports = {
         'footer-max-line-length': [2, 'always', 100],
         'subject-empty': [2, 'never'],
         'subject-full-stop': [2, 'never', '.'],
-        'jira-ticket': [2, 'always', /\[JDTD-\d+\]/],
         'type-case': [2, 'always', 'lower-case'],
         'type-empty': [2, 'never'],
     },
     plugins: [
         {
             rules: {
-                'jira-ticket': ({ header }) => {
-                    const jiraRegex = /\[JDTD-\d+\]/;
-                    return [
-                        jiraRegex.test(header),
-                        'header must contain a valid JIRA ticket number in format [JDTD-xxxx]',
-                    ];
-                },
                 'header-format': ({ header }) => {
-                    const headerRegex = /^(feat|fix|docs|style|refactor|test|build|ci|chore|perf|revert)\([^)]+\): .+ \[JDTD-\d+\]$/;
+                    const headerRegex = /^(feat|fix|docs|style|refactor|test|build|ci|chore|perf|revert)\([^)]+\): .+( \[JDTD-\d+\])?$/;
                     return [
                         headerRegex.test(header),
-                        'header must match the pattern: <type>(<scope>): <subject> [JDTD-xxxx]',
+                        'header must match the pattern: <type>(<scope>): <subject> with optional [JDTD-xxxx]',
                     ];
                 },
             },
