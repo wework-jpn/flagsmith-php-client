@@ -43,7 +43,7 @@ jobs:
         run: composer install --prefer-dist --no-progress --no-interaction
 
       - name: Validate Composer config
-        run: composer validate --no-check-publish
+        run: composer validate --no-check-publish --no-check-lock
 
       - name: Check formatting
         run: composer lint

@@ -8,6 +8,7 @@ This fork is based on `Flagsmith/flagsmith-php-client` `v5.1.1`. It keeps the up
 
 - PHP `>=8.1`
 - `ext-bcmath`
+- Laravel/Illuminate `^8.0 || ^9.0 || ^10.0 || ^11.0 || ^12.0`
 - PSR-17 and PSR-18 implementations, such as Guzzle and PSR-7
 
 This fork does not require `ext-gmp`.
@@ -18,20 +19,20 @@ This package is not published on Packagist, so add it to your application's `com
 
 ```bash
 composer config repositories.flagsmith-laravel-client vcs https://github.com/wework-jpn/flagsmith-laravel-client.git
-composer require wework-japan/flagsmith-laravel-client:dev-main
+composer require wework-japan/flagsmith-laravel-client:dev-main -W
 ```
 
 If Composer cannot access the GitHub API because of local SSL certificate issues, use SSH and disable GitHub API metadata lookups:
 
 ```bash
 composer config repositories.flagsmith-laravel-client '{"type":"vcs","url":"git@github.com:wework-jpn/flagsmith-laravel-client.git","no-api":true}'
-composer require wework-japan/flagsmith-laravel-client:dev-main
+composer require wework-japan/flagsmith-laravel-client:dev-main -W
 ```
 
 To install a specific tagged release:
 
 ```bash
-composer require wework-japan/flagsmith-laravel-client:v1.0.0
+composer require wework-japan/flagsmith-laravel-client:v1.0.0 -W
 ```
 
 Replace `v1.0.0` with the tag you want to install. The branch or tag must contain a `composer.json` whose `name` is `wework-japan/flagsmith-laravel-client`.
@@ -41,14 +42,16 @@ Replace `v1.0.0` with the tag you want to install. The branch or tag must contai
 If your application requires `dev-main`, update to the latest commit on the `main` branch with:
 
 ```bash
-composer update wework-japan/flagsmith-laravel-client
+composer update wework-japan/flagsmith-laravel-client -W
 ```
 
 To move to a different tag, require the new tag explicitly:
 
 ```bash
-composer require wework-japan/flagsmith-laravel-client:v1.0.1
+composer require wework-japan/flagsmith-laravel-client:v1.0.1 -W
 ```
+
+Do not include the version constraint in the `composer update` command. Use `composer require wework-japan/flagsmith-laravel-client:dev-main -W` when you need to change the required branch or tag, and `composer update wework-japan/flagsmith-laravel-client -W` when you only need to refresh the locked commit.
 
 ## Development Checks
 
