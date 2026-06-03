@@ -6,4 +6,5 @@ return [
     'environment_ttl' => env('FLAGSMITH_ENVIRONMENT_TTL') !== null ? (int) env('FLAGSMITH_ENVIRONMENT_TTL') : null,
     'enable_analytics' => (bool) env('FLAGSMITH_ENABLE_ANALYTICS', false),
     'offline_mode' => (bool) env('FLAGSMITH_OFFLINE_MODE', false),
+    'offline_handler' => env('FLAGSMITH_OFFLINE_HANDLER'),
 ];

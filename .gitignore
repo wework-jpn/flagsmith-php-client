@@ -1,0 +1,7 @@
+vendor
+package-lock.json
+composer.lock
+/node_modules/
+.env
+.php-cs-fixer.cache
+.phpunit.result.cache
