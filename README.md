@@ -9,13 +9,13 @@ This package is not published on Packagist, so add it to your application's `com
 The Composer package name is `wework-japan/flagsmith-laravel-client`, but Composer must be configured with the GitHub repository URL that hosts the source code:
 
 ```bash
-composer config repositories.flagsmith-laravel-client vcs https://github.com/wework-jpn/flagsmith-php-client.git
+composer config repositories.flagsmith-laravel-client vcs https://github.com/wework-jpn/flagsmith-laravel-client.git
 ```
 
 If Composer cannot access the GitHub API because of local SSL certificate issues, use SSH and disable GitHub API metadata lookups:
 
 ```bash
-composer config repositories.flagsmith-laravel-client '{"type":"vcs","url":"git@github.com:wework-jpn/flagsmith-php-client.git","no-api":true}'
+composer config repositories.flagsmith-laravel-client '{"type":"vcs","url":"git@github.com:wework-jpn/flagsmith-laravel-client.git","no-api":true}'
 ```
 
 Install the latest code from the `main` branch:
